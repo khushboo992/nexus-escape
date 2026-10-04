@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 
 import { useState } from "react";
 import { updateGuest } from "../_lib/actions";
@@ -36,9 +37,11 @@ const UpdateProfileForm = ({ children, guest }) => {
         <div className="flex items-center justify-between">
           <label htmlFor="nationality">Where are you from?</label>
           {countryFlag && (
-            <img
+            <Image
               src={countryFlag}
               alt="Country flag"
+              height="20"
+              width="30"
               className="h-5 rounded-sm"
             />
           )}

@@ -1,5 +1,5 @@
 "use client";
-
+import Image from "next/image";
 import { useReservation } from "./ReservationContext";
 import SubmitButton from "./SubmitButton";
 import { differenceInDays } from "date-fns";
@@ -28,7 +28,7 @@ function ReservationForm({ cabin, user }) {
         <p>Logged in as</p>
 
         <div className="flex gap-4 items-center">
-          <img
+          <Image
             // Important to display google profile images
             referrerPolicy="no-referrer"
             className="h-8 rounded-full"
